@@ -10,7 +10,7 @@ type CountryPropsType={
 export const Country = (props: CountryPropsType) => {
    
 const setAll = () => {
-props.setFilterValue("ALL")
+props.setFilterValue("ALL")//
     }
 
 
