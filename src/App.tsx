@@ -1,28 +1,45 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+
+import "./App.css";
+import { useEffect, useState } from "react";
+
+type TodosType = {
+  userId: number;
+  id: number;
+  title: string;
+  completed: boolean;
+};
 
 function App() {
-    return (
-        <div className="App">
-            <div>
-                <h3>What to learn</h3>
-                <div>
-                    <input/>
-                    <button>+</button>
-                </div>
-                <ul>
-                    <li><input type="checkbox" checked={true}/> <span>HTML&CSS</span></li>
-                    <li><input type="checkbox" checked={true}/> <span>JS</span></li>
-                    <li><input type="checkbox" checked={false}/> <span>React</span></li>
-                </ul>
-                <div>
-                    <button>All</button>
-                    <button>Active</button>
-                    <button>Completed</button>
-                </div>
-            </div>
-        </div>
-    );
+  const [todos, setTodos] = useState<TodosType[]>([]);
+
+  const fetchFoo = () => {
+    fetch("https://jsonplaceholder.typicode.com/todos")
+      .then((response) => response.json())
+      .then((json) => setTodos(json));
+  };
+
+  useEffect(() => {
+    fetchFoo();
+  }, []);
+
+  return (
+    <div className="App">
+      <ul>
+        {" "}
+        {todos.map((el) => {
+          return (
+            <li key={el.id}>
+              <span>{el.id}</span>
+              <span>__{el.userId}</span>
+              <span>__{el.title}</span>
+              <input type="checkbox" checked={el.completed} />
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
 }
 
 export default App;
