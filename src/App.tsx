@@ -16,25 +16,41 @@ function App() {
             <SuperButton callBack={()=>{}} color='red'>RED SUPER BUTTON</SuperButton>
             <SuperButton callBack={()=>{}}>SUPER BUTTON</SuperButton>
             <SuperButton callBack={()=>{}} disabled>DISABLED SUPER BUTTON</SuperButton>
+            
+            <SuperAdidas tasks={tasks}/>
 
-            <SuperAdidas tasks = {tasks} />
-            <SuperAdidas tasks = {tasks} >
+            <SuperAdidas tasks={tasks}>
             <SuperButton callBack={()=>{}} color='red'>RED SUPER BUTTON</SuperButton>
             <SuperButton callBack={()=>{}}>SUPER BUTTON</SuperButton>
             <input type="text"/>
             <input type="text"/>
             <div>info</div>
-            </SuperAdidas>
-
-
-            <SuperAdidas tasks = {tasks} />
-            <SuperAdidas tasks = {tasks} >
-            <SuperButton callBack={()=>{}} color='red'>RED SUPER BUTTON</SuperButton>
-            <SuperButton callBack={()=>{}}>SUPER BUTTON</SuperButton>
-            <input type="text"/>
-            <input type="text"/>
+            <div>info</div>
+            <div>info</div>
+            <div>info</div>
             <div>info</div>
             </SuperAdidas>
+
+            <SuperAdidas tasks = {tasks}>
+            <SuperButton callBack={()=>{}} color='red'>RED SUPER BUTTON</SuperButton>
+            <SuperButton callBack={()=>{}}>SUPER BUTTON</SuperButton>
+            <SuperButton callBack={()=>{}} disabled>DISABLED SUPER BUTTON</SuperButton>
+            <div>info</div>
+            <div>info</div>
+            <input type="text"/>
+            <input type="text"/>
+            <input type="text"/>
+            <input type="text"/>
+            <input type="text"/>
+            <input type="text"/>
+            <input type="text"/>
+            <input type="text"/>
+            <input type="text"/>
+            <input type="text"/>
+            </SuperAdidas>
+            
+   
+            
         </div>
     );
 }

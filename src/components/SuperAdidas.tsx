@@ -20,7 +20,6 @@ export const SuperAdidas: React.FC <PropsType> = (props: PropsType) => {
 {tasks.map(el =>{
     return (
         <li key = {el.id}>
-            <span>{el.id}</span>
             <span>{el.title}</span>
             <input type = {'checkbox'} checked = {el.isDone}/>
         </li>
